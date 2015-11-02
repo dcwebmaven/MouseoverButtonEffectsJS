@@ -1,0 +1,60 @@
+<BODY>
+<SCRIPT language="JavaScript">
+<!--
+
+  if (document.images)
+   {
+     pic1on= new Image(100,25);
+     pic1on.src="http://www.useractive.com/homey.gif";  
+     pic2on= new Image(100,25);
+     pic2on.src="http://www.useractive.com/linky.gif";
+     pic3on= new Image(100,25);
+     pic3on.src="http://www.useractive.com/emaily.gif";
+
+     pic1off= new Image(100,25);
+     pic1off.src="http://www.useractive.com/homeb.gif";
+     pic2off= new Image(100,25);
+     pic2off.src="http://www.useractive.com/linkb.gif";
+     pic3off=new Image(100,25);
+     pic3off.src="http://www.useractive.com/emailb.gif";
+   }
+
+function lightup(imgName,imgName2,imgName3)
+ {
+   if (document.images)
+    {
+      imgOn=eval(imgName + "on.src");
+      document[imgName].src= imgOn;
+      imgOn2=eval(imgName2 + "on.src");
+      document[imgName2].src= imgOn2;
+      imgOn3=eval(imgName3 + "on.src");
+      document[imgName3].src= imgOn3;
+    }
+ }
+
+function turnoff(imgName,imgName2,imgName3)
+ {
+   if (document.images)
+    {
+      imgOff=eval(imgName + "off.src");
+      document[imgName].src= imgOff;
+      imgOff2=eval(imgName2 + "off.src");
+      document[imgName2].src= imgOff2;
+      imgOff3=eval(imgName3 + "off.src");
+      document[imgName3].src=imgOff3;
+    }
+ }
+
+//-->
+</SCRIPT>
+</HEAD>
+
+<BODY>
+<A HREF="newpage.html" onMouseover="lightup('pic1','pic2','pic3')" onMouseout="turnoff('pic1','pic2','pic3')">
+<IMG SRC="http://www.useractive.com/homeb.gif" name="pic1" width="100" height="25" border="1">
+</A>
+<BR>
+<IMG SRC="http://www.useractive.com/linkb.gif" name="pic2" width="100" height="25" border="1">
+<BR>
+<IMG SRC="http://www.useractive.com/emailb.gif" name="pic3" width="100" height="25" border="1">
+</BODY>
